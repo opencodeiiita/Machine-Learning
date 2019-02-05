@@ -7,7 +7,6 @@ Created on Sat Jan 26 11:21:42 2019
 
 import pandas as pd
 import matplotlib.pyplot as plt 
-from pandas.plotting import scatter_matrix
 
 train_data = pd.read_csv('train.csv')
 test_data = pd.read_csv('test.csv')
@@ -28,8 +27,8 @@ plt.show()
 test_data.plot(kind='box', subplots=True, layout=(3,3), sharex=False, sharey=False)
 plt.show()
 
-scatter_matrix(train_data)
+plt.scatter(x = train_data_x , y = train_y , c = ['darkgray'] , s = 150)
 plt.show()
 
-scatter_matrix(test_data)
+plt.scatter(x = test_data_x , y = test_y , c = ['darkgray'] , s = 150)
 plt.show()
